@@ -1,0 +1,107 @@
+<html>
+        <head>
+
+                <style>
+                        body{
+                                background-color:skyblue;
+                                text-align:center;
+                        }
+                        h1{
+                                font-size:3em;
+                                font-family:맑은고딕;
+                                color:rgb(148, 34, 34);
+                        }
+                        h2{
+                                color:black;
+                        }
+                        .txt{
+                                width:50%;
+                                height:10%;
+                                font-size:3em;
+                                text-align:center;
+                        }
+                        .btn1{
+                                width:30%;
+                                height:10%;
+                                font-size:3em;
+                                background-color:pink;
+                                color:blueviolet;
+                        }
+                        .btn2{
+                                width:30%;
+                                height:10%;
+                                font-size:3em;
+                                background-color:rgb(136, 218, 189);
+                                color:rgb(219, 118, 113);
+                        }
+                        .btn3{
+                                width:20%;
+                                height:10%;
+                                font-size:3em;
+                                background-color:rgb(216, 235, 132);
+                                color:rgb(21, 208, 130);
+                        }
+                        #timer{
+                                font-size:3.5em;
+                                text-align: center;
+                                width:30%;
+                                height:10%;
+                        }
+
+                </style>
+
+        </head>
+        <body>
+                <h1>숫자를 맞춰라!!</h1>
+                <h2>숫자 333을 맞춰라</h2>
+
+                <input id="timer" value="0"><br><br>
+                <button class='btn1' onclick='card1();'>Start</button>
+                <button class='btn2' onclick='card2();'>Stop</button>
+                <button class='btn3' onclick='card3();'>Reset</button>
+
+               
+                <script>
+                        setInterval(timer,10);
+
+                        var i=0;
+                        var state=0;
+
+                        function timer()
+                        {
+                            switch(state){
+                                        case 1:
+                                                i++;
+                                        break;
+                                        case 2:
+                                                
+                                        break;
+                                        case 3:
+                                                i=0;
+                                        break;
+                                       
+                                        default:
+
+                                        break;
+
+                            }
+                                        document.getElementById('timer').value = i;
+                
+                        }
+                        function card1()
+                        {
+                            state=1;
+                        }
+                        function card2()
+                        {
+                            state=2;
+                        }
+                        function card3()
+                        {
+                            state=3;
+                        }
+                        
+
+                </script>
+        </body>
+</html>

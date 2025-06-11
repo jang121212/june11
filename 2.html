@@ -1,0 +1,35 @@
+
+<html>
+<head>
+    <title>이미지 바꾸기</title>
+    <style>
+            body{
+                    background-color: rgb(252, 255, 175);
+                    text-align: center;
+            }
+            .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function changeimage() {
+            document.getElementById('img1').src = '101.png';
+        }
+
+        function backimage() {
+            document.getElementById('img1').src = '100.png';
+        }
+        
+    </script>
+
+    <img id="img1" src="100.png"><br><br>
+    <input type='button' class='btn' value='사진바꾸기' onclick='changeimage();'>
+    <input type='button' class='btn' value='사진되돌리기' onclick='backimage();'>
+</body>
+</html>
